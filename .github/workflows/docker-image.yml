@@ -36,5 +36,5 @@ jobs:
         with:
           context: sample-packages/docker/
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: latest
+          labels: latest
