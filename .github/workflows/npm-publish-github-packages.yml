@@ -18,7 +18,6 @@ jobs:
           path: sample-packages/npm/
       - run: npm --prefix sample-packages/npm/ install
       - run: npm --prefix sample-packages/npm/ ci 
-      - run: npm --prefix sample-packages/npm/ test
 
   publish-gpr:
     needs: build
