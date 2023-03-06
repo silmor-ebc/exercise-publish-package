@@ -3,6 +3,8 @@
 
 name: Node.js Package
 
+defaults:
+  working-directory: sample-packages/npm/
 on:
   release:
     types: [created]
@@ -13,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        working-directory: sample-packages/npm/
         with:
           node-version: 16
       - run: npm ci
@@ -28,7 +29,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        working-directory: sample-packages/npm/
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
