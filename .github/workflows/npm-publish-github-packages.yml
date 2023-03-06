@@ -6,8 +6,8 @@ name: Node.js Package
 defaults:
   working-directory: sample-packages/npm/
 on:
-  release:
-    types: [created]
+  push:
+    branches: ['release', 'main', 'master']
 
 jobs:
   build:
